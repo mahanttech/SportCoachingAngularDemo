@@ -1,0 +1,63 @@
+
+
+
+<div id="login" fxLayout="column" fusePerfectScrollbar>
+
+    <div id="login-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+        <div id="login-form" *fuseIfOnDom [@animate]="{value:'*',params:{duration:'3ms',y:'100px'}}">
+
+           
+            <div class="title">LOGIN TO YOUR ACCOUNT</div>
+
+            <form name="loginForm" [formGroup]="loginForm" novalidate>
+
+                <mat-form-field>
+                    <input matInput placeholder="Username" #username  formControlName="lgusername" [(ngModel)]="lgusername">
+                    <mat-error *ngIf="loginFormErrors.email.required">
+                        Username is required
+                    </mat-error>
+                    <!-- <mat-error *ngIf="!loginFormErrors.email.required && loginFormErrors.email.email">
+                        Please enter a valid email address
+                    </mat-error> -->
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" #password formControlName="lgpassword" [(ngModel)]="lgpassword">
+                    <mat-error *ngIf="loginFormErrors.password.required">
+                        Password is required
+                    </mat-error>
+                </mat-form-field>
+
+             
+                <!-- <a class="link" [routerLink]="'/pages/auth/otplogin'">Go back to login</a> -->
+                <button mat-raised-button color="accent" (click)="DoLogin()" class="submit-button" [disabled]="loginForm.invalid" aria-label="LOG IN">
+                    LOGIN
+                </button>
+              
+                <!-- [disabled]="loginForm.invalid"  comment By Nishant--> 
+
+            </form>
+<!-- 
+            <div class="separator">
+                <span class="text">OR</span>
+            </div>
+
+            <button mat-raised-button class="google">
+                Log in with Google
+            </button>
+
+            <button mat-raised-button class="facebook">
+                Log in with Facebook
+            </button>
+
+            <div class="register" fxLayout="column" fxLayoutAlign="center center">
+                <span class="text">Don't have an account?</span>
+                <a class="link" [routerLink]="'/pages/auth/register'">Create an account</a>
+            </div>
+ -->
+        </div>
+
+    </div>
+
+</div>

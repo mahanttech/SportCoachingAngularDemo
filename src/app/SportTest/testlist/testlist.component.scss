@@ -1,0 +1,55 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-height: 500px;
+  //  overflow: auto;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .mat-radio-button {
+    display: inline-block;
+    margin-left: 10px;
+}
+.header.accent.p-24 {
+  min-height: 70px!important;
+      max-height: 70px!important;
+}
+
+
+
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.mobile-label {
+  display: none;
+}
+
+@media(max-width: 600px) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+        font-weight: bold;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row { 
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
+}

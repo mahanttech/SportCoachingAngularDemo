@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+  <!-- <h1>Are you sure want to delete service "{{data.ServiceName}}"? </h1> -->
+  <h1>Are you sure want to delete athlete "{{data.AthleteName}}" from this Test? </h1>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary"  class="submit-button ml-16"[mat-dialog-close]="" cdkFocusInitial>No</button>
+  <button mat-raised-button color="warn" class="submit-button ml-16" (click)="DeleteAthlete()">Yes</button>
+</div>
